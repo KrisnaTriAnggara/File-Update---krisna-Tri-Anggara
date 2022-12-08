@@ -1,0 +1,42 @@
+@import "../../style.scss";
+
+.leftBar {
+  @include themify($themes){
+  flex: 1.5;
+  position: sticky;
+  top: 95px;
+  height: calc(100vh - 95px);
+  background-color: themed("bg");
+  color:themed("textColor");
+
+  .container {
+    padding: 20px;
+    border: 1px solid themed("border");
+
+
+    .menu {
+      .category {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid lightgrey;
+      }
+
+      .item {
+        ul {
+          display: flex;
+          flex-direction: column;
+          margin-block-start: 0;
+          padding-inline: 0;
+          gap: 20px;
+
+          li {
+            list-style-type: none;
+          }
+        }
+      }
+    }
+  }
+}
+}
